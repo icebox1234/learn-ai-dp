@@ -35,7 +35,8 @@ embedding_model = milvus_model.DefaultEmbeddingFunction()
 test_embedding = embedding_model.encode_queries(["This is a test"])[0]
 embedding_dim = len(test_embedding)
 print(embedding_dim)
+print(test_embedding[:10])
 
 from pymilvus import MilvusClient
 
-milvus_client = MilvusClient(uri="./test.db")
+milvus_client = MilvusClient("milvus_demo.db")
